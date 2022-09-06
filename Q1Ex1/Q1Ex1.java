@@ -17,11 +17,13 @@ public class Q1Ex1 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        //person 1
-        int p1Comnum = 2;
-        String name = "MJ Laxina";
+        //Monday Subj Periods
+        //Subj 1
+        int periods = 2;
+        String name = "CompSci";
+        String teacher = "Sir. Mark Tarcelo";
         
-        System.out.println("Person 1 /n Computer number:  /n Name: ");
+        //System.out.println("");
     }
     
 }
