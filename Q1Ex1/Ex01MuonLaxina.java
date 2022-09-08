@@ -51,7 +51,13 @@ public class Q1Ex1 {
         System.out.println("Subject Teacher: " + teacher3);
         System.out.println(" ");
         
-        
+        int total = periods1 + periods2 + periods3;
+        boolean equality = periods2==periods3;
+        boolean equalityn = name1==name2;
+        System.out.println("Total Number of Periods: " + total);
+        System.out.println("Total time: " + total*45 + " minutes");
+        System.out.println("Does " + name2 + " and " + name3 + " have equal time? " + equality);
+        System.out.println("Is subject 1 and subject 2 the same? " + equalityn);
     }
     
 }
