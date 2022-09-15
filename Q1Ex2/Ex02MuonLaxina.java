@@ -18,13 +18,6 @@ public class Q1Ex2 {
      */
     public static void main(String[] args) {
         System.out.println("||||Welcome to Higher or Lower!||||");
-        
-        /*String myStr1 = "Hello";
-        String myStr2 = "HELLO";
-        String myStr3 = "Another String";
-        System.out.println(myStr1.equalsIgnoreCase(myStr2)); // true
-        System.out.println(myStr1.equalsIgnoreCase(myStr3)); // false*/ //to figure out how to use equals
-        
         Scanner sc = new Scanner(System.in);
         boolean end  = false;
         boolean cont  = true;
