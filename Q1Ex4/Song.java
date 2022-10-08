@@ -9,10 +9,18 @@ package q1ex4;
  * @author Monique Jhoienyl
  */
 public class Song {
-    double minuteRunTime;
-    String title, artist, album;
-    boolean liked;
-
+    private double minuteRunTime;
+    private String title, artist, album;
+    private boolean liked;
+    
+    public String getTitle(){
+        return title;
+    }
+    
+    public String getArtist(){
+        return artist;
+    }
+    
     public Song(double minuteRunTime, String title, String artist, String album, boolean liked){
         this.minuteRunTime = minuteRunTime;
         this.title = title;
