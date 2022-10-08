@@ -9,8 +9,8 @@ package q1ex4;
  * @author Monique Jhoienyl
  */
 public class Subjects {
-    int periods;
-    String teacher, subject, day;
+    private int periods;
+    private String teacher, subject, day;
     
     
     public Subjects(int periods, String teacher, String subject, String day){
