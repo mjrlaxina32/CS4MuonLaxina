@@ -27,11 +27,13 @@ public class Q1Ex4 {
             Song song3 = new Song(3.41, "Ligaya", "Eraserheads", "Ultramagneticpop!", true);
 
             Singer singer1 = new Singer("Mang Aawit");
+            Singer singer2 = new Singer("Taga Tipa");
             singer1.setFavSong(song1);
             singer1.performForAudience(10);
             singer1.setFavSong(song3);
-            singer1.performForAudience(2);
-            
+            singer1.performForAudience(10, singer2);
+            singer2.performForAudience(1);
+            singer2.performForAudience(10, singer1);
            //System.out.println(singer1.favSong.title);
     }
     
