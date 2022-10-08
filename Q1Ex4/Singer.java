@@ -9,10 +9,11 @@ package q1ex4;
  * @author Monique Jhoienyl
  */
 public class Singer {
-    String name;
-    int noOfPerformances;
-    double earnings;
-    Song favSong;
+    private String name;
+    private int noOfPerformances;
+    private double earnings;
+    private Song favSong;
+    private static int totalPerformances;
     
     //favoriteSong - how to assign a class to a variable 
     public Singer(String name){
@@ -21,14 +22,31 @@ public class Singer {
         earnings = 0;
     }
     
+    public String getName(){
+        return name;
+    }
+    
     public void performForAudience(int personNum) {
         noOfPerformances++;
+        totalPerformances++;
         earnings += 100*personNum;
         System.out.println(name+" performed for a whopping audience of "+personNum+". They now have "+earnings+" pesos. They have performed "+noOfPerformances+" times.");
+        System.out.println("All the singers have performed "+totalPerformances+" times.\n");
+    }
+    
+    public void performForAudience(int personNum, Singer collab) {
+        noOfPerformances++;
+        totalPerformances++;
+        collab.noOfPerformances++;
+        earnings += 50*personNum;
+        collab.earnings += 50*personNum;
+        System.out.println(name+" collabed with "+collab.getName()+" to perform for a whopping audience of "+personNum+". They now have "+earnings+" pesos. They have performed "+noOfPerformances+" times.");
+        System.out.println("All the singers have performed "+totalPerformances+" times.\n");
     }
      
+    
     public void setFavSong(Song cSong) {
         this.favSong = cSong;
-        System.out.println(name+"'s Favorite song is "+favSong.title+" by "+favSong.artist+".");
+        System.out.println(name+"'s Favorite song is "+favSong.getTitle()+" by "+favSong.getArtist()+".\n");
     }
 }
