@@ -80,7 +80,7 @@ public class Store {
     // print statement indicating the sale
   }
   public void addItem(Item i){
-      itemList.add(i);
+      itemList.add(i); //WHY WONT THIS WO
       // add Item i to store's itemList
   }
   public void filterType(String type){
