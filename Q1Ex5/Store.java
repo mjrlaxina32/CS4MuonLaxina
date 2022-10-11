@@ -80,8 +80,8 @@ public class Store {
     // print statement indicating the sale
   }
   public void addItem(Item i){
-    itemList.add(i);
-    // add Item i to store's itemList
+      itemList.add(i);
+      // add Item i to store's itemList
   }
   public void filterType(String type){
     for (Item e : itemList){
@@ -109,7 +109,8 @@ public class Store {
   }
   public static void printStats(){
     // loop over storeList and print the name and the earnings'Store.java'
-
+    for (Store e : storeList){
+        System.out.println(e.getName() + " - " + e.getEarnings());
+    }
   }
 }
-
