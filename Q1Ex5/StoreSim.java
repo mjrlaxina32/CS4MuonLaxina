@@ -41,28 +41,28 @@ public class StoreSim {
         watsons.addItem(i5);
         watsons.addItem(i6);
 
-    mall.addItem(i1);
-    mall.addItem(i2);
-    mall.addItem(i4);
-    mall.addItem(i5);
-    mall.addItem(i6);
-    mall.addItem(i7);
-    mall.addItem(i8);
-    mall.addItem(i9);
+        mall.addItem(i1);
+        mall.addItem(i2);
+        mall.addItem(i4);
+        mall.addItem(i5);
+        mall.addItem(i6);
+        mall.addItem(i7);
+        mall.addItem(i8);
+        mall.addItem(i9);
 
-    mall.filterType("food");
-    mall.filterCheap(500);
-    mall.filterExpensive(1000);
+        mall.filterType("food");
+        mall.filterCheap(500);
+        mall.filterExpensive(1000);
 
-    mcdo.sellItem(0);
-    mcdo.sellItem(50);
-    watsons.sellItem("Soap");
-    watsons.sellItem("Mouthwash");
-    mall.sellItem(i7);
-    mall.sellItem(i3);
+        mcdo.sellItem(0);
+        mcdo.sellItem(50);
+        watsons.sellItem("Soap");
+        watsons.sellItem("Mouthwash");
+        mall.sellItem(i7);
+        mall.sellItem(i3);
 
-    // Check final earnings
-    Store.printStats();
+        // Check final earnings
+        Store.printStats();
     }
     
 }
