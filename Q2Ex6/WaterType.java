@@ -9,16 +9,16 @@ package exercise06muonlaxinamoniquejhoienyl;
  *
  * @author MUON
  */
-public class FireType extends Monster {
-    public FireType(String n, int m, int base){
-        super(n, "fire", "grass", "water", m, base);
-        atk *= 1.3;
-        def *= 0.7;
+public class WaterType extends Monster {
+    public WaterType(String n, int m, int base){
+        super(n, "water", "fire", "grass", m, base);
+        atk *= 0.7;
+        def *= 1.3;
     }
     
     @Override
     public void special(){
-        atk += 2;
+        def += 2;
         hp -= maxHP*0.10;
     }
 }
