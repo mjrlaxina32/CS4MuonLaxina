@@ -14,17 +14,55 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        /**In the main method, create three Monsters, one of each type (you may
-        choose the values for the Monsters). Simulate 3 separate battles, Grass 
-        vs Fire, Fire vs Water, and Water vs Grass. Create a loop so that they 
-        repeatedly attack each other until one or both HP is reduced to 0. There
-        is no need for user input in the main method, so you may hardcode the 
-        entire process.**/
+    public static void main(String[] args) {        
+        FireType fm = new FireType("NINE", 35, 10);
+        GrassType gm = new GrassType("LEAF BOI", 45, 10);
+        WaterType wm = new WaterType ("NATURE SPRINGS",50, 10);
         
-        FireType fm = new FireType("fire9", 200, 10);
-        GrassType gm = new GrassType("Ded", 150, 10);
-        WaterType wm = new WaterType ("Wilkins", 250, 10);
+        boolean fight = true;
+        System.out.println("[Match 1 - Grass vs Fire]");
+        while(fight = true){
+            gm.attack(fm );
+            fm.attack(gm);
+            if(gm.getHP()==0 || fm.getHP()==0){
+                System.out.println("Match over!");
+                gm.resetHealth();
+                fm.resetHealth();
+                fight = false;
+                break;
+            } 
+        }
+        fight = true;
+        
+        System.out.println("\n[Match 2 - Fire vs Water]");
+        while(fight = true){
+        fm.attack(wm );
+        wm.attack(fm);
+            if(fm.getHP()==0 || wm.getHP()==0){
+                System.out.println("Match over!");
+                fm.resetHealth();
+                wm.resetHealth();
+                fight = false;
+                break;
+            }
+        }
+        fight = true;
+        
+        System.out.println("\n[Match 3 - Water vs Grass]");
+        while(fight = true){
+        wm.attack(gm );
+        gm.attack(wm);
+            if (gm.getHP()<=10){
+                gm.rest();
+            }
+            if(wm.getHP()==0 || gm.getHP()==0){
+                System.out.println("Match over!");
+                wm.resetHealth();
+                gm.resetHealth();
+                fight = false;
+                break;
+            }
+        }
     }
     
 }
