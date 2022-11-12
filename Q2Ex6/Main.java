@@ -17,7 +17,6 @@ public class Main {
         FireType fm = new FireType("NINE", 35, 10);
         GrassType gm = new GrassType("LEAF BOI", 45, 10);
         WaterType wm = new WaterType ("NATURE SPRINGS",50, 10);
-        
         boolean fight = true;
         //cooldowns
         int rcd1 = 0; int rcd2 = 0;
@@ -27,20 +26,20 @@ public class Main {
         System.out.println("[Match 1 - Grass vs Fire]");
         while(fight = true){
             //monster 1 turn - grass
-            if (rcd1>=2 && gm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 70){ //70% chance of resting
+            if (rcd1>=2 && gm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 70){ //70% chance of resting
                 gm.rest();
                 rcd1=0;
             }
-            else if (gcd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of guard
+            else if (gcd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)<= 30){ //30% chance of guard
                 gm.guard();
                 gcd1=0;
             }
-            else if (ccd1>=3 &&(int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of charging
+            else if (ccd1>=3 &&(int)Math.floor(Math.random()*(100-1+1)+1)<= 30){ //30% chance of charging
                 gm.charge();
                 ccd1=0;
             }
             else {
-                if (scd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 50){ //50% chance of special
+                if (scd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)<= 50){ //50% chance of special
                     gm.special();
                     scd1=0;
                 }
@@ -49,20 +48,20 @@ public class Main {
             rcd1++; gcd1++; ccd1++; scd1++; 
             
             //monster 2 turn - fire
-            if (rcd2>=3 && fm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 50){ //50% chance of resting
+            if (rcd2>=3 && fm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1)<= 50){ //50% chance of resting
                 fm.rest();
                 rcd2=0;
             }
-            else if (gcd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of guard
+            else if (gcd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)<= 30){ //30% chance of guard
                 fm.guard();
                 gcd2=0;
             }
-            else if (ccd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of charging
+            else if (ccd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)<= 30){ //30% chance of charging
                 fm.charge();
                 ccd2=0;
             }
             else {
-                if (scd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 70){ //70% chance of special
+                if (scd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)<= 70){ //70% chance of special
                     fm.special();
                     scd2=0;
                 }
@@ -88,20 +87,20 @@ public class Main {
         System.out.println("\n[Match 2 - Fire vs Water]");
         while(fight = true){
             //monster 1 turn - fire
-            if (rcd1>=3 && fm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 50){ //50% chance of resting
+            if (rcd1>=3 && fm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 50){ //50% chance of resting
                 fm.rest();
                 rcd1=0;
             }
-            else if (gcd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of guard
+            else if (gcd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 30){ //30% chance of guard
                 fm.guard();
                 gcd1=0;
             }
-            else if (ccd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of charging
+            else if (ccd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 30){ //30% chance of charging
                 fm.charge();
                 ccd1=0;
             }
             else {
-                if (scd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 70){ //70% chance of special
+                if (scd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 70){ //70% chance of special
                     fm.special();
                     scd1=0;
                 }
@@ -110,20 +109,20 @@ public class Main {
             rcd1++; gcd1++; ccd1++; scd1++; 
             
             //monster 2 turn - water
-            if (rcd2>=3 && wm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 50){ //50% chance of resting
+            if (rcd2>=3 && wm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 50){ //50% chance of resting
                 wm.rest();
                 rcd2=0;
             }
-            else if (gcd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of guard
+            else if (gcd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 30){ //30% chance of guard
                 wm.guard();
                 gcd2=0;
             }
-            else if (ccd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of charging
+            else if (ccd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 30){ //30% chance of charging
                 wm.charge();
                 ccd2=0;
             }
             else {
-                if (scd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 70){ //70% chance of special
+                if (scd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 70){ //70% chance of special
                     wm.special();
                     scd2=0;
                 }
@@ -149,20 +148,20 @@ public class Main {
         System.out.println("\n[Match 3 - Water vs Grass]");
         while(fight = true){
             //monster 1 turn - water
-            if (rcd1>=3 && wm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 50){ //50% chance of resting
+            if (rcd1>=3 && wm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 50){ //50% chance of resting
                 wm.rest();
                 rcd1=0;
             }
-            else if (gcd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of guard
+            else if (gcd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 30){ //30% chance of guard
                 wm.guard();
                 gcd1=0;
             }
-            else if (ccd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of charging
+            else if (ccd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 30){ //30% chance of charging
                 wm.charge();
                 ccd1=0;
             }
             else {
-                if (scd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 70){ //70% chance of special
+                if (scd1>=3 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 70){ //70% chance of special
                     wm.special();
                     scd1=0;
                 }
@@ -171,20 +170,20 @@ public class Main {
             rcd1++; gcd1++; ccd1++; scd1++; 
             
             //monster 2 turn - grass
-            if (rcd2>=2 && gm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 70){ //70% chance of resting
+            if (rcd2>=2 && gm.getHP()<=10 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 70){ //70% chance of resting
                 gm.rest();
                 rcd2=0;
             }
-            else if (gcd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of guard
+            else if (gcd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 30){ //30% chance of guard
                 gm.guard();
                 gcd2=0;
             }
-            else if (ccd2>=3 &&(int)Math.floor(Math.random()*(100-1+1)+1)>= 30){ //30% chance of charging
+            else if (ccd2>=3 &&(int)Math.floor(Math.random()*(100-1+1)+1) <= 30){ //30% chance of charging
                 gm.charge();
                 ccd2=0;
             }
             else {
-                if (scd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1)>= 50){ //50% chance of special
+                if (scd2>=3 && (int)Math.floor(Math.random()*(100-1+1)+1) <= 50){ //50% chance of special
                     gm.special();
                     scd2=0;
                 }
