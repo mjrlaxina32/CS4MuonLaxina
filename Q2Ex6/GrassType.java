@@ -16,6 +16,7 @@ public class GrassType extends Monster{
     
     @Override
     public void special(){
+        System.out.println(name + " did a pose!");
         atk += 2;
         hp += maxHP*0.20;
     }
@@ -24,6 +25,6 @@ public class GrassType extends Monster{
     public void rest(){
         hp += maxHP * 0.50;
         if(hp > maxHP) hp = maxHP;
-        System.out.println(getName() + " rested. It's health is now " + hp + ".");
+        System.out.println(name + " rested. It's health is now " + hp + ".");
     }
 }
