@@ -18,6 +18,7 @@ public class WaterType extends Monster {
     
     @Override
     public void special(){
+        System.out.println(name + " did a pose!");
         def += 2;
         hp -= maxHP*0.10;
     }
