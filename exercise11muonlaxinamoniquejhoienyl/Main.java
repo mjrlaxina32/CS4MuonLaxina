@@ -21,7 +21,7 @@ public class Main {
         Subject chem = new Subject("Chemistry", "chemistry.png", 3, 1.5);
         Subject physics = new Subject("Physics", "physics.png", 3, 1.75);
         Subject cs = new Subject("CS", "computer science.png", 1, 1.5);
-        Subject displayedSubject = math;
+        Subject displayedSubject = cs;
         
         JFrame window = new JFrame("Swing window");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,22 +32,21 @@ public class Main {
         
         
         /* Adding text */
-        JLabel sampleText = new JLabel(displayedSubject.getName());
-        sampleText.setForeground(Color.blue);
-        sampleText.setFont(new Font(Font.SANS_SERIF, Font.ITALIC, 20));
-        window.add(sampleText);
-         
+        JLabel subjUnits = new JLabel("Units: " + String.valueOf(displayedSubject.getUnits()));
+        JLabel subjGrade = new JLabel("Grade: "+ String.valueOf(displayedSubject.getGrade()));
+        subjUnits.setVerticalTextPosition(JLabel.BOTTOM);
+        subjGrade.setForeground(Color.blue);
+        window.add(subjUnits);
+        window.add(subjGrade);
+        
         /* Adding an image */
-        JLabel sampleImage = new JLabel();
+        JLabel subjIcon = new JLabel();
         ImageIcon img = new ImageIcon(Main.class.getResource(displayedSubject.getImgFileName()));
-        sampleImage.setIcon(img);
-        sampleImage.setText(String.valueOf(displayedSubject.getUnits()));
-        sampleImage.setHorizontalTextPosition(JLabel.CENTER);
-        sampleImage.setVerticalTextPosition(JLabel.BOTTOM);
-        window.add(sampleImage);
-        sampleImage.setText(String.valueOf(displayedSubject.getGrade()));
-        sampleImage.setVerticalTextPosition(JLabel.BOTTOM);
-        window.add(sampleImage);
+        subjIcon.setIcon(img);
+        subjIcon.setText(displayedSubject.getName());
+        subjIcon.setHorizontalTextPosition(JLabel.CENTER);
+        subjIcon.setVerticalTextPosition(JLabel.BOTTOM);
+        window.add(subjIcon);
         
         /* Adding a button */
         JButton button = new JButton("Next");
