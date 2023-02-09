@@ -29,7 +29,7 @@ public class Main {
         window.setSize(450,450);
         
         /* Setting a layout */
-        
+        window.setLayout(new GridLayout(2,3));
         
         
         /* Adding text */
