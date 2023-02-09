@@ -12,15 +12,28 @@ import javax.swing.*;
  *
  * @author MUON
  */
-public class SubjectLayout extends JFrame{
-    private JPanel SubjDet;
+public class SubjectLayout extends JPanel{
+    private JPanel subjLO;
+    private JFrame subjDet;
+    private JLabel subjIcon;
+    
     
     public SubjectLayout(Subject displayedSubject){
         /*super("Subjects");
         this.setLayout(new GridLayout(2,3));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500, 500);*/
-        BoxLayout layout =  new BoxLayout(JPanel, orientation);
+        this.subjIcon = new JLabel();
+        ImageIcon img = new ImageIcon(Main.class.getResource(displayedSubject.getImgFileName()));
+        this.subjIcon.setIcon(img);
+        this.subjIcon.setText(displayedSubject.getName());
+        this.subjIcon.setHorizontalTextPosition(JLabel.CENTER);
+        this.subjIcon.setVerticalTextPosition(JLabel.BOTTOM);
+        this.subjDet = new DetailLayout(displayedSubject);
+        subjLO.setLayout(new FlowLayout(FlowLayout.CENTER));
+        
+        subjLO.add(subjIcon);
+        subjLO.add(subjDet);
     }
     
     
