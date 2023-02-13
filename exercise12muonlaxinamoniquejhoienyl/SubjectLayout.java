@@ -14,15 +14,14 @@ import javax.swing.*;
  */
 public class SubjectLayout extends JPanel{
     private JPanel subjLO;
-    private JFrame subjDet;
+    private JPanel subjDet;
     private JLabel subjIcon;
     
     
     public SubjectLayout(Subject displayedSubject){
-        /*super("Subjects");
-        this.setLayout(new GridLayout(2,3));
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(500, 500);*/
+        subjLO = new JPanel();
+        FlowLayout layout =  new FlowLayout(FlowLayout.CENTER);
+        subjLO.setLayout(layout);
         this.subjIcon = new JLabel();
         ImageIcon img = new ImageIcon(Main.class.getResource(displayedSubject.getImgFileName()));
         this.subjIcon.setIcon(img);
@@ -30,11 +29,11 @@ public class SubjectLayout extends JPanel{
         this.subjIcon.setHorizontalTextPosition(JLabel.CENTER);
         this.subjIcon.setVerticalTextPosition(JLabel.BOTTOM);
         this.subjDet = new DetailLayout(displayedSubject);
-        subjLO.setLayout(new FlowLayout(FlowLayout.CENTER));
         
         subjLO.add(subjIcon);
         subjLO.add(subjDet);
+        this.add(subjLO);
+        //this.add(subjDet);
+        //this.add(subjIcon);
     }
-    
-    
 }
