@@ -11,7 +11,6 @@ package exercise12muonlaxinamoniquejhoienyl;
  */
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class Main {
 
@@ -22,37 +21,29 @@ public class Main {
         Subject chem = new Subject("Chemistry", "chemistry.png", 3, 1.5);
         Subject physics = new Subject("Physics", "physics.png", 3, 1.75);
         Subject cs = new Subject("CS", "computer science.png", 1, 1.5);
-        Subject displayedSubject = cs;
         
-        JFrame window = new JFrame("Swing window");
+        /* initializing window*/
+        JFrame window = new JFrame("Subjects");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setSize(450,450);
         
         /* Setting a layout */
-        window.setLayout(new GridLayout(2,3));
+        GridLayout layout = new GridLayout(3,3);
+        window.setLayout(layout);
         
+        /*making the subject panels*/
+        SubjectLayout mathLO = new SubjectLayout(math); 
+        SubjectLayout bioLO = new SubjectLayout(bio); 
+        SubjectLayout chemLO = new SubjectLayout(chem); 
+        SubjectLayout physicsLO = new SubjectLayout(physics); 
+        SubjectLayout csLO = new SubjectLayout(cs); 
         
-        /* Adding text */
-        JLabel subjUnits = new JLabel("Units: " + String.valueOf(displayedSubject.getUnits()));
-        JLabel subjGrade = new JLabel("Grade: "+ String.valueOf(displayedSubject.getGrade()));
-        subjUnits.setVerticalTextPosition(JLabel.BOTTOM);
-        subjGrade.setForeground(Color.blue);
-        window.add(subjUnits);
-        window.add(subjGrade);
-        
-        /* Adding an image */
-        JLabel subjIcon = new JLabel();
-        ImageIcon img = new ImageIcon(Main.class.getResource(displayedSubject.getImgFileName()));
-        subjIcon.setIcon(img);
-        subjIcon.setText(displayedSubject.getName());
-        subjIcon.setHorizontalTextPosition(JLabel.CENTER);
-        subjIcon.setVerticalTextPosition(JLabel.BOTTOM);
-        window.add(subjIcon);
-        
-        /* Adding a button */
-        JButton button = new JButton("Next");
-        button.setHorizontalTextPosition(JButton.LEFT);
-        window.add(button);
+        /*display*/
+        window.add(mathLO);
+        window.add(bioLO);
+        window.add(chemLO);
+        window.add(physicsLO);
+        window.add(csLO);
         
         window.setVisible(true);
     }
