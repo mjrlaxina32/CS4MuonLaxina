@@ -12,16 +12,12 @@ import javax.swing.*;
  *
  * @author MUON
  */
-public class DetailLayout extends JFrame{
+public class DetailLayout extends JPanel{
     private JPanel subjDet;
     private JLabel subjUnits, subjGrade;
     
     
     public DetailLayout(Subject displayedSubject){
-        /*super("Subjects");
-        this.setLayout(new GridLayout(2,3));
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(500, 500);*/
         this.subjUnits = new JLabel("Units: " + String.valueOf(displayedSubject.getUnits()));
         this.subjGrade = new JLabel("Grade: "+ String.valueOf(displayedSubject.getGrade()));
         this.subjDet = new JPanel();
@@ -29,8 +25,7 @@ public class DetailLayout extends JFrame{
         subjDet.add(subjUnits);
         subjDet.add(subjGrade);
         
-        
-        //this.setLayout(new GridLayout(2,3));
+        this.add(subjDet);
     }
     
     
