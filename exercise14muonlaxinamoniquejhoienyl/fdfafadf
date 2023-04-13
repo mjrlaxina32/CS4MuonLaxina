@@ -1,54 +1,52 @@
 package exercise12muonlaxinamoniquejhoienyl;
 
+import java.util.*;
 /**
- *
- * @author MUON
+ * A Subject contains the name, image, units, and the grade of the student.
  */
 public class Subject {
     private String name, imgFileName;
     private double units, grade;
+	private static ArrayList<Subject> subjectList = new ArrayList();
 	
     /**
-     *
-     * @param n
-     * @param i
-     * @param u
-     * @param g
+     * @param n name input
+     * @param i image file name input
+     * @param u units input
+     * @param g grades input
      */
     public Subject(String n, String i, double u, double g){
         name = n;
         imgFileName = i;
         units = u;
         grade = g;
+		subjectList.add(this);
     }
 
     /**
-     *
-     * @return
+     * @return String with the name of the subject
      */
     public String getName() {
         return name;
     }
 
     /**
-     *
-     * @return
+     * @return String with the file name of the corresponding image for the subject
      */
     public String getImgFileName(){
         return imgFileName;
     }
 
     /**
-     *
-     * @return
+     * @return Double with the units of the subject
      */
     public double getUnits() {
         return units;
     }
 
     /**
-     *
-     * @param units
+     * @param units unit input
+     * Changes the value of the unit of the subject
      */
     public void setUnits(double units) {
         units = units;
@@ -68,5 +66,48 @@ public class Subject {
      */
     public void setGrade(double grade) {
         grade = grade;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public static int getListLength() {
+        return subjectList.size();
+    }
+
+    /**
+     *
+     * @param s
+     * @return
+     * @throws NullPointerException
+     */
+    public static int getSubjectIndex(Subject s) throws NullPointerException {
+        if(subjectList.contains(s)) return subjectList.indexOf(s);
+        else throw new NullPointerException();
+    }
+
+    /**
+     *
+     * @param s
+     * @return
+     * @throws NullPointerException
+     */
+    public static int getSubjectIndex(String s) throws NullPointerException {
+        if(subjectList.contains(searchSubject(s))) return subjectList.indexOf(searchSubject(s));
+        else throw new NullPointerException();
+    }
+
+    /**
+     *
+     * @param search
+     * @return
+     * @throws NullPointerException
+     */
+    public static Subject searchSubject(String search) throws NullPointerException {
+        for(Subject s : subjectList){
+            if(s.getName().equalsIgnoreCase(search)) return s;
+        }
+        throw new NullPointerException();
     }
 }
