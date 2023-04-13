@@ -1,0 +1,72 @@
+package exercise12muonlaxinamoniquejhoienyl;
+
+/**
+ *
+ * @author MUON
+ */
+public class Subject {
+    private String name, imgFileName;
+    private double units, grade;
+	
+    /**
+     *
+     * @param n
+     * @param i
+     * @param u
+     * @param g
+     */
+    public Subject(String n, String i, double u, double g){
+        name = n;
+        imgFileName = i;
+        units = u;
+        grade = g;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getImgFileName(){
+        return imgFileName;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public double getUnits() {
+        return units;
+    }
+
+    /**
+     *
+     * @param units
+     */
+    public void setUnits(double units) {
+        units = units;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public double getGrade() {
+        return grade;
+    }
+
+    /**
+     *
+     * @param grade
+     */
+    public void setGrade(double grade) {
+        grade = grade;
+    }
+}
